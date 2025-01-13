@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header {
     background-color: #333;
@@ -17,14 +20,23 @@ nav {
     text-align: center;
 }
 main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
     padding: 2rem;
+}
+.sidebar {
+    background-color: #ddd;
+    padding: 1rem;
+}
+.content {
+    background-color: #fff;
+    padding: 1rem;
 }
 footer {
     background-color: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
