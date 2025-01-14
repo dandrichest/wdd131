@@ -14,13 +14,26 @@ header {
     text-align: center;
 }
 nav {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly */
+    gap: 10px; /* Adjusts the space between each item */
     background-color: #444;
     color: #fff;
     padding: 1rem;
     text-align: center;
+    
 }
 a {
     color: #fff; margin: 0 1rem
+}
+
+nav a {
+    padding: 2px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Adds the underline on hover */
 }
 main {
     flex: 1;
@@ -29,17 +42,65 @@ main {
     gap: 1rem;
     padding: 2rem;
 }
-.sidebar {
+.card {
     background-color: #ddd;
     padding: 1rem;
+    
+}
+.card a:active {
+    color: red; /* Color when the link is clicked */
+    
+}
+
+.card a {
+    color: blue;
+    text-decoration: none;
 }
 .content {
     background-color: #fff;
     padding: 1rem;
+}
+h2 {
+    background-color: #444;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+h3 {
+    text-align: center;
+   
+}
+#img1 {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+    float: left; /* Aligns the image to the right */
+    margin-right: 10px; /* Adds some space to the left of the image */
+    border-radius: 15px; /* Curved edges */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Embossed effect*/
+}
+#img2 {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+    float: right; /* Aligns the image to the right */
+    margin-left: 10px; /* Adds some space to the left of the image */
+    border-radius: 15px; /* Curved edges */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Embossed effect */
+}
+hr {
+    border: 1px solid #ccc; /* Adjust the color and thickness of the line */
+    margin: 40px 0; /* Adds space above and below the line */
 }
 footer {
     background-color: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+.flower-symbol {
+    color: red; /* Change this to the desired color */
+}
+footer p {
+    margin: 5px 0; /* Adds some space between the paragraphs */
 }
