@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -13,28 +18,51 @@ header {
     padding: 1rem;
     text-align: center;
 }
+
+i {
+    color: chocolate;
+}
+
 nav {
-    display: flex;
-    justify-content: space-between; /* Distributes space evenly */
-    gap: 10px; /* Adjusts the space between each item */
-    background-color: #444;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background-color: #0f6c91;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
+    
     
 }
-a {
-    color: #fff; margin: 0 1rem
+
+nav ul {
+    list-style-type: none;
 }
 
 nav a {
-    padding: 2px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
     text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: underline; /* Adds the underline on hover */
+.active {
+    color: yellow;
 }
+
+nav a:hover {
+    border: 1px solid #fff;
+}
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+        
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}
+
 main {
     flex: 1;
     display: grid;
@@ -42,24 +70,21 @@ main {
     gap: 1rem;
     padding: 2rem;
 }
-.card {
+section {
     background-color: #ddd;
     padding: 1rem;
     
 }
-.card a:active {
+section a:active {
     color: red; /* Color when the link is clicked */
     
 }
 
-.card a {
+section a {
     color: blue;
     text-decoration: none;
 }
-.content {
-    background-color: #fff;
-    padding: 1rem;
-}
+
 h2 {
     background-color: #444;
     color: #fff;
