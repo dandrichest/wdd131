@@ -130,7 +130,3 @@ footer p {
     margin: 5px 0; /* Adds some space between the paragraphs */
 }
 
-.markdown-body pre code, .markdown-body pre tt { /* Incorrect: max-width: auto; */ max-width: 100%; /* or specify a specific value */ max-width: 800px;
-}
-
-.markdown-body li { overflow-wrap: break-word; /* Corrected value */ } .markdown-body pre code, .markdown-body pre tt { max-width: 100%; /* Corrected value */ /* or specify a specific value */ max-width: 800px; }
