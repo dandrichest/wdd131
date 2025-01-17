@@ -67,6 +67,10 @@ main {
 	margin: 0 auto;
 }
 
+h2 {
+    text-align: center;
+}
+
 h1 {
 	font-size: 2rem;
 }
