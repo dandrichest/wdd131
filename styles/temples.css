@@ -1,36 +1,114 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-    
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    margin: 0; 
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between;
+    align-items: center; /* Center elements horizontally */
+    height: 100vh;
+    margin: 0;
     background-color: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+header {
+    background-color: #5907f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 30px #333;
+}
+
+h1 {
+    color: #eee;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #5907f1;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  nav a:hover {
+	text-decoration: none;
+	background-color: #eee;
+	color: #000;
+}
+
+  
+  .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin: 0 10px;
+  }
+  
+  .nav-menu a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  
+ 
+  
+    .nav-menu li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Styles for the Main Content */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+
 .temples {
-    display:grid;
+    display: grid;
     place-items: center;
-    grid-gap: 25px;place-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
 figure {
-    margin: 0;
-    padding: 0;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+    width: 100%;
 }
 
 img {
@@ -45,109 +123,68 @@ figcaption {
     background-color: #f8f8f8;
     font-size: 14px;
     color: #333;
-    white-space: nowrap; 
-    overflow: hidden; 
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
-    
-}
-
-
-/* mobile **************************/
-header {
-	background-color: #bbb;
-	display: grid;
-	grid-gap: 1rem;
-	padding: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 30px #333;
-}
-
-header,
-main {
-	margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-}
-
-h1 {
-	font-size: 2rem;
-}
-
-nav {
-	background-color: #36454f;
-}
-
-nav ul {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-}
-
-nav a {
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 1rem;
-	text-decoration: none;
-	font-size: larger;
-}
-
-nav a:hover {
-	text-decoration: none;
-	background-color: #eee;
-	color: #000;
-}
-
-.active {
-	color: yellow;
-}
-
-/* Small Screens */ 
-@media (max-width: 739px) { 
-    .container { 
-        grid-template-columns: 1fr; 
-    } 
-    figure { 
-        width: 100%; 
-    } figcaption { 
-        font-size: 14px; 
-    } 
-}
-
-/* Larger Views ******************************/
-@media (min-width: 740px) {
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav ul {
-		justify-content: flex-end;
-		flex-direction: row;
-	}
-	nav a {
-		flex: 1 1 100%;
-	}
-    .container { 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 20px; 
-    } 
-        figcaption { font-size: 16px; 
-        } 
 }
 
 footer {
-    background-color: #36454f;
+    background-color: #5907f1;
     color: #fff;
     padding: 1rem;
     text-align: center;
+    width: 100%;
 }
+
 .flower-symbol {
-    color: red; /* Change this to the desired color */
+    color: whitesmoke; /* Change this to the desired color */
 }
+
 footer p {
     margin: 5px 0; /* Adds some space between the paragraphs */
 }
 
+/* Mobile View */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .temples {
+        grid-template-columns: 1fr;
+    }
+    figure {
+        width: 100%;
+    }
+    figcaption {
+        font-size: 14px;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .temples {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    figcaption {
+        font-size: 16px;
+    }
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-menu li {
+        display: inline;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
