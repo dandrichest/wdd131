@@ -1,12 +1,20 @@
 * {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+        }
+:root {
+    --main-bg-color: green;
+    --main-text-color: #fff;
+    --main-bgg-color: darkgreen;
+          }
+
 header {
-  background-color: green;
-  color: #fff;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   padding: 20px;
   text-align: center;
 }
@@ -105,7 +113,7 @@ weather-data::after {
 
   h2 {
       padding: 20px;
-      background-color: darkgreen;
+      background-color: var(--main-bgg-color);
       color: #f7f7f7;
       margin-top: 0;
   }
@@ -120,8 +128,8 @@ ul {
 }
 
 footer {
-  background-color: darkgreen;
-  color: #fff;
+  background-color: var(--main-bgg-color);
+  color: var(--main-text-color);
   padding: 10px;
   text-align: center;
   font-size: large;
