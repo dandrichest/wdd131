@@ -1,0 +1,123 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: green;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Default to column layout */
+  justify-content: flex-end; /* Move items to the bottom */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the element */
+  z-index: 1; /* Place the image behind other content */
+}
+
+/* Large screen background */
+@media (min-width: 768px) {
+  #largeScreen {
+      display: block;
+  }
+  #smallScreen {
+      display: none;
+  }
+}
+
+/* Small screen background */
+@media (max-width: 767px) {
+  #largeScreen {
+      display: none;
+  }
+  #smallScreen {
+      display: block;
+      
+  }
+
+
+}
+
+.nation-data, .weather-data {
+  background-color: rgba(247, 247, 247, 0.8); /* Add transparency */
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Ensure full width */
+  position: relative;
+  z-index: 1;
+}
+
+.weather-data i {
+  font-size: 2rem; /* Adjust the size as needed */
+  color: #333; /* Adjust the color as needed */
+  margin-right: 10px; /* Space between the icon and weather data */
+  
+}
+
+@media (min-width: 1024px) {
+  .hero {
+      flex-direction: row; /* Change to row layout for larger screens */
+      justify-content: space-between; /* Space between items */
+      align-items: flex-start; /* Align items to the top */
+  }
+
+  
+  .nation-data { 
+    order: 1; /* Ensure nation-data appears first */ 
+    width: 25%; /* Adjust the width as needed */ 
+    margin-bottom: 20px; /* Add space between sections */
+    margin-left: 30px;
+    margin-top: 30px;
+  } 
+
+  .weather-data { 
+    order: 2; /* Ensure weather-data appears second */ 
+    width: 25%; /* Adjust the width as needed */ 
+    align-self: flex-end; /* Position weather-data to the right */ 
+    margin-right: 30px; 
+    margin-bottom: 30px;
+  }
+
+  h2 {
+      padding: 20px;
+      background-color: darkgreen;
+      color: #f7f7f7;
+      margin-top: 0;
+  }
+
+
+}
+
+ul {
+  list-style-type: none; /* Removes the bullet points */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+}
+
+footer {
+  background-color: darkgreen;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+  clear: both;
+  position: relative;
+  z-index: 0;
+}
