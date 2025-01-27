@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Daniel Oyeniyi" />
-    <title>Nigeria</title>
+    <meta
+      name="description"
+      content="WDD 131 - Dynamic Web Fundamentals - Daniel Oyeniyi, is a responsive page the display different Background images on different Screen size"
+    />
+    <title>Responsive page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/place.css" />
@@ -25,7 +25,7 @@
     <main class="hero">
       <img
         id="largeScreen"
-        src="images/pexels-dokun_d.webp"
+        src="images/Yoruba-Dancers.webp"
         alt="Large Screen Background"
         class="hero-image"
       />
@@ -50,7 +50,11 @@
       </div>
       <div class="weather-data">
         <h2>Weather</h2>
-        <i class="fas fa-cloud-sun"></i>
+        <img
+          id="svg"
+          srcset="images/weather-icon.svg"
+          alt="Small Screen Background"
+        />
         <!-- Weather icon -->
         <div id="weather"></div>
       </div>
