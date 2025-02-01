@@ -118,7 +118,7 @@ img {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-figcaption {
+section {
     padding: 10px;
     text-align: center;
     background-color: gainsboro;
@@ -159,7 +159,7 @@ footer p {
     figure {
         width: 100%;
     }
-    figcaption {
+    section {
         font-size: 14px;
     }
 }
@@ -175,7 +175,7 @@ footer p {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
-    figcaption {
+    section {
         font-size: 16px;
     }
     .nav-menu {
