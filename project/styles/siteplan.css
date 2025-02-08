@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #98ff98
+    background: #fff
 }
 
 header {
@@ -31,7 +31,7 @@ nav ul li a {
 
 .hero {
     background:#ff7f50;
-    color: #fff;
+    color: black;
     padding: 50px 0;
     text-align: center;
 }
