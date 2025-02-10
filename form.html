@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Review Form</title>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Daniel Oyeniyi" />
@@ -20,13 +20,13 @@
     <main>
         <form action="review.html" method="get">
             <!-- Product Name -->
-            <label for="productName">Product Name:</label>
+            <label for="product">Product Name:</label>
             <select id="products" name="productName" required>
                 <option value="" disabled selected>Select a Product ...</option>
             </select>
 
             <!-- Overall Rating -->
-            <label for="rating">Overall Rating:</label>
+            <label for="overallrating">Overall Rating:</label>
             <div class="rating">
                 <input type="radio" id="star5" name="rating" value="5" />
                 <label for="star5" title="5 stars">☆</label>
@@ -45,22 +45,22 @@
             <input type="date" id="installationDate" name="installationDate" autocomplete="off" required />
 
             <!-- Useful Features -->
-            <label for="usefulFeatures">Which features did you find useful in the product:</label>
+            <label for="features">Which features did you find useful in the product:</label>
             <i>(Check all that apply)</i>
             <label for="durability">
-                <input type="checkbox" id="durability" name="usefulFeatures" value="Durability" autocomplete="off" />
+                <input type="checkbox" id="durability" name="usefulFeatures" value="Durability" />
                 Durability
             </label>
             <label for="easeofuse">
-                <input type="checkbox" id="easeofuse" name="usefulFeatures" value="Ease of Use" autocomplete="off" />
+                <input type="checkbox" id="easeofuse" name="usefulFeatures" value="Ease of Use" />
                 Ease of Use
             </label>
             <label for="performance">
-                <input type="checkbox" id="performance" name="usefulFeatures" value="Performance" autocomplete="off" />
+                <input type="checkbox" id="performance" name="usefulFeatures" value="Performance" />
                 Performance
             </label>
             <label for="design">
-                <input type="checkbox" id="design" name="usefulFeatures" value="Design" autocomplete="off" />
+                <input type="checkbox" id="design" name="usefulFeatures" value="Design" />
                 Design
             </label>
 
