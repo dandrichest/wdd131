@@ -1,151 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Review Form</title>
-    <meta
-      name="description"
-      content="WDD 131 - Dynamic Web Fundamentals - Daniel Oyeniyi"
-    />
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Daniel Oyeniyi" />
     <meta name="author" content="Daniel Oyeniyi" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/form.css" />
     <script defer src="scripts/form.js"></script>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>Product Review</h1>
+        <h1>Product Review</h1>
     </header>
     <main>
-      <form action="review.html" method="get">
-        <!-- Product Name -->
-        <label for="productName">Product Name:</label>
-        <select id="products" name="productName" required>
-          <option value="" disabled selected>Select a Product ...</option>
-        </select>
+        <form action="review.html" method="get">
+            <!-- Product Name -->
+            <label for="productName">Product Name:</label>
+            <select id="products" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
 
-        <!-- Overall Rating -->
-        <label for="rating">Overall Rating:</label>
-        <div class="rating">
-          <input type="radio" id="star5" name="rating" value="5" /><label
-            for="star5"
-            title="5 stars"
-            >☆</label
-          >
-          <input type="radio" id="star4" name="rating" value="4" /><label
-            for="star4"
-            title="4 stars"
-            >☆</label
-          >
-          <input type="radio" id="star3" name="rating" value="3" /><label
-            for="star3"
-            title="3 stars"
-            >☆</label
-          >
-          <input type="radio" id="star2" name="rating" value="2" /><label
-            for="star2"
-            title="2 stars"
-            >☆</label
-          >
-          <input type="radio" id="star1" name="rating" value="1" /><label
-            for="star1"
-            title="1 star"
-            >☆</label
-          >
-        </div>
+            <!-- Overall Rating -->
+            <label for="rating">Overall Rating:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5" title="5 stars">☆</label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4" title="4 stars">☆</label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3" title="3 stars">☆</label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2" title="2 stars">☆</label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1" title="1 star">☆</label>
+            </div>
 
-        <!-- Date of Installation -->
-        <label for="installationDate">Date of Installation:</label>
-        <input
-          type="date"
-          id="installationDate"
-          name="installationDate"
-          autocomplete="off"
-          required
-        />
+            <!-- Date of Installation -->
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" autocomplete="off" required />
 
-        <!-- Useful Features -->
-        <label>Which features did you find useful in the product:</label>
-        <i>(Check all that apply)</i>
+            <!-- Useful Features -->
+            <label for="usefulFeatures">Which features did you find useful in the product:</label>
+            <i>(Check all that apply)</i>
+            <label for="durability">
+                <input type="checkbox" id="durability" name="usefulFeatures" value="Durability" autocomplete="off" />
+                Durability
+            </label>
+            <label for="easeofuse">
+                <input type="checkbox" id="easeofuse" name="usefulFeatures" value="Ease of Use" autocomplete="off" />
+                Ease of Use
+            </label>
+            <label for="performance">
+                <input type="checkbox" id="performance" name="usefulFeatures" value="Performance" autocomplete="off" />
+                Performance
+            </label>
+            <label for="design">
+                <input type="checkbox" id="design" name="usefulFeatures" value="Design" autocomplete="off" />
+                Design
+            </label>
 
-        <label for="durability"
-          ><input
-            type="checkbox"
-            id="durability"
-            name="durability"
-            value="Durability"
-            autocomplete="off"
-          />Durability</label
-        >
+            <!-- Written Review -->
+            <label for="writtenReview">Written Review<i>(optional)</i></label>
+            <textarea id="writtenReview" name="writtenReview" rows="4" cols="50" autocomplete="off"></textarea>
 
-        <label for="EaseofUse"
-          ><input
-            type="checkbox"
-            id="EaseofUse"
-            name="easeofuse"
-            value="Ease of Use"
-            autocomplete="off"
-          />Ease of Use</label
-        >
+            <!-- User Name -->
+            <label for="userName">User Name<i>(optional)</i></label>
+            <input type="text" id="userName" name="userName" autocomplete="off" /><br /><br />
 
-        <label for="performance"
-          ><input
-            type="checkbox"
-            id="performance"
-            name="performance"
-            value="Performance"
-            autocomplete="off"
-          />Performance</label
-        >
-
-        <label for="design"
-          ><input
-            type="checkbox"
-            id="design"
-            name="design"
-            value="Design"
-            autocomplete="off"
-          />Design</label
-        >
-
-        <!-- Written Review -->
-        <label for="writtenReview">Written Review<i>(optional)</i></label>
-        <textarea
-          id="writtenReview"
-          name="writtenReview"
-          rows="4"
-          cols="50"
-          autocomplete="off"
-        ></textarea>
-
-        <!-- User Name -->
-        <label for="userName">User Name<i>(optional)</i></label>
-        <input
-          type="text"
-          id="userName"
-          name="userName"
-          autocomplete="off"
-        /><br /><br />
-
-        <!-- Form Submission Button -->
-        <input type="submit" value="Post Review" />
-      </form>
+            <!-- Form Submission Button -->
+            <input type="submit" value="Post Review" />
+        </form>
+        <p id="review-counter"></p>
     </main>
     <footer>
-      <p id="current-year">
-        &copy; 2025<span class="flower-symbol">✿</span>Daniel Oyeniyi<span
-          class="flower-symbol"
-          >✿</span
-        >Nigeria
-      </p>
-      <p id="lastModified"></p>
+        <p id="current-year">
+            &copy; 2025<span class="flower-symbol">✿</span>Daniel Oyeniyi<span class="flower-symbol">✿</span>Nigeria
+        </p>
+        <p id="lastModified"></p>
     </footer>
-  </body>
+
+</body>
 </html>
